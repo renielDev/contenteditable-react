@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ContentEditable from './components/ContentEditable'
 
 function App() {
   const [count, setCount] = useState(0)
+  const inputRef = useRef('Sample')
+
+  const onChange = (_event: React.SyntheticEvent) => {
+    const evt = _event.target as HTMLInputElement
+    console.log(evt)
+    inputRef.current = evt?.value
+  }
 
   return (
     <>
@@ -17,6 +25,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <input onChange={onChange}></input>
+      <ContentEditable html={inputRef.current} onChange={onChange} className="content-editable" />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
