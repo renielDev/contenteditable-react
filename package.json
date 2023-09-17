@@ -2,6 +2,7 @@
   "name": "@reindev/contenteditable-react",
   "version": "1.0.0",
   "type": "module",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,7 +19,7 @@
     "typescript"
   ],
   "homepage": "https://github.com/renielDev/contenteditable-react",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/renielDev/contenteditable-react/issues",
     "email": "christabeldev@gmail.com"
