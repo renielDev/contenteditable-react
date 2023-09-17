@@ -4,8 +4,6 @@ const ContentEditable = (_props: Prop) => {
   const {tagName, noHtml, disabled, html, className, onChange, ...props} = _props
   const selfRef = createRef<HTMLElement>()
 
-  console.log(selfRef)
-
   const getEl = () => {
     return selfRef?.current
   }
